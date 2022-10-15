@@ -17,8 +17,6 @@
   "description": "nodejs",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "desarrollo": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
   "keywords": [
