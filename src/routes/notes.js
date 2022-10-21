@@ -32,7 +32,7 @@ router.post('/notes/add-notes', async (req, res) => {
 });
 
 router.get('/notes', async (req, res) => {
-  const notes = await Note.find().lean();
+  const notes = await Note.find().sort({date: 'desc'}).lean();
   res.render('notes/all-notes', { notes });
 });
 
