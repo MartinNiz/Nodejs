@@ -36,4 +36,8 @@ router.get('/notes', async (req, res) => {
   res.render('notes/all-notes', { notes });
 });
 
+router.get('/notes/edit/:id', async (req,res) => {
+  const note = await Note.findById(req.params.id).lean();
+  res.render('notes/edit-notes', {note});
+})
 module.exports = router;

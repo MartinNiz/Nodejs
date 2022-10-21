@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-3 mx-auto">
+
+    <div class="card">
+      <div class="card-header">
+        <h4>Edit notes</h4>
+      </div>
+      <div class="card-body">
+        <form action="/notes/add-notes" method="POST">
+          <div class="form-group mt10">
+            <input type="text" name="title" class="form-control" placeholder="Title" value="{{note.title}}" autofocus>
+          </div>
+          <div class="form-group mt10">
+            <textarea name="description" class="form-control mt10">{{note.description}}</textarea>
+          </div>
+          <div class="form-group mt10">
+            <button class="btn btn-primary w-100" type="submit">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+  </div>
+</div>
