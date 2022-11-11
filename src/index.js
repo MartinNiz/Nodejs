@@ -39,8 +39,9 @@ app.use((req, res, next) => {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
+  res.locals.data_user = req.user || null;
   next();
-})
+});
 
 //Routes
 app.use(require('./routes/index'));
