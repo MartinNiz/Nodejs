@@ -8,4 +8,6 @@ const NoteSchema = new Schema({
   user: { type: String}
 });
 
+
+
 module.exports = mongoose.model('Note', NoteSchema)

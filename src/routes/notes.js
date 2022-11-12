@@ -39,6 +39,13 @@ router.get('/notes', isAuthenticated, async (req, res) => {
   res.render('notes/all-notes', { notes });
 });
 
+router.get('/notes/:sort', isAuthenticated, async (req, res) => {
+  console.log(req.params.sort)
+  const notes = await Note.find({user: req.user.id}).sort({date: req.params.sort}).lean();
+  res.render('notes/all-notes', { notes });
+});
+
+
 router.get('/notes/edit/:id', isAuthenticated,  async (req,res) => {
   const note = await Note.findById(req.params.id).lean();
   res.render('notes/edit-notes', {note});

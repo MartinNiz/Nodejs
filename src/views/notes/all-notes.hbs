@@ -1,4 +1,16 @@
   <div class="row">
+
+    <div class="dropdown">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        Sort By Date
+      </a>
+
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item" href="/notes/asc">Asc</a></li>
+        <li><a class="dropdown-item" href="/notes/desc">Dsc</a></li>
+      </ul>
+    </div>
+
     {{#each notes}}
     <div class="col-sm-6 col-md-3">
       <div class="card 10 mt-3">
